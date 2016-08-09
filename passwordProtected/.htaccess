@@ -1,4 +1,4 @@
-AuthUserFile c:\Apache24\.htpasswd
+AuthUserFile /etc/apache2/.htpasswd
 AuthType Basic
 AuthName "Enter a Username and Password"
 Require valid-user
