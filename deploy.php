@@ -1,9 +1,9 @@
 <?php
 // Set Variables
-$LOCAL_ROOT         = "/var/www/";
-$LOCAL_REPO_NAME    = "html";
+$LOCAL_ROOT         = "/var/www/html";
+$LOCAL_REPO_NAME    = "CSE135";
 $LOCAL_REPO         = "{$LOCAL_ROOT}/{$LOCAL_REPO_NAME}";
-$REMOTE_REPO        = "http://github.com/mhmorshe/CSE135.git";
+$REMOTE_REPO        = "git@github.com:mhmorshe/CSE135.git";
 $BRANCH             = "master";
 
 if ( $_POST['payload'] ) {
