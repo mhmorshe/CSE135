@@ -6,7 +6,7 @@ $LOCAL_REPO         = "{$LOCAL_ROOT}/{$LOCAL_REPO_NAME}";
 $REMOTE_REPO        = "git@github.com:mhmorshe/CSE135.git";
 $BRANCH             = "master";
 
-  if($_POST['push'])
+  if($_POST['payload'])
   {
     shell_exec("cd /var/www/html");
     shell_exec("git pull");
