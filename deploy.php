@@ -6,6 +6,12 @@ $LOCAL_REPO         = "{$LOCAL_ROOT}/{$LOCAL_REPO_NAME}";
 $REMOTE_REPO        = "git@github.com:mhmorshe/CSE135.git";
 $BRANCH             = "master";
 
+
+  shell_exec("cd /var/www/html");
+  shell_exec("git pull");
+  die("done " . mktime());
+
+/*
 if ( $_POST['payload'] ) {
   // Only respond to POST requests from Github
   if( file_exists($LOCAL_REPO) ) {
@@ -22,5 +28,5 @@ if ( $_POST['payload'] ) {
     die("done " . mktime());
   }
 }
-
+*/
 ?>
