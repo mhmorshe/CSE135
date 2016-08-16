@@ -1,5 +1,4 @@
 #!/usr/bin/perl
-#hello.pl - My first CGI program
 
 print "Content-Type: text/html\n\n";
 # Note there is a newline between 
