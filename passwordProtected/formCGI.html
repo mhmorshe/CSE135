@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="This is the status page">
+  <meta name="author" content="Mahir Morshed">
+	
+  <link rel="shortcut icon" type="image/x-icon" href="/../img/favicon.ico">
+  <link rel=" icon" type="image/x-icon" href="/../img/favicon.ico">
+  <title>Form Collection in CGI</title>
+
+  <!-- Bootstrap Core CSS -->
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Theme CSS -->
+  <link href="../css/agency.min.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top" class="index">
+
+
+    <script type="text/javascript">
+      function SetActionAndMethod()
+      {
+        if(document.getElementById("methods").value == "get")
+        {
+          document.getElementById("formID").method = "get";
+        }
+        else
+	{
+          document.getElementById("formID").method = "post";
+	}
+
+      } 
+    </script>
+
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+    <div class="intro-text">
+
+
+
+    <form id = "formID" action = "echo.cgi" method = "post">
+      First Name:<br> <input type = "text" style = "color: #000000" 
+                       name = "firstname"><br><br><br>
+
+      Last Name:<br> <input type = "text" style = "color: #000000"
+                      name = "lastname"><br><br><br>
+
+      Favorite Color:<select name = "color" style = "color: #000000">
+        <option value = "#FFFFFF" style = "color: #000000">White</option>
+        <option value = "#FF0000" style = "color: #000000">Red</option> 
+        <option value = "#00CC00" style = "color: #000000">Green</option>
+        <option value = "#0000FF" style = "color: #000000">Blue</option>
+        <option value = "#FF3300" style = "color: #000000">Orange</option>
+        <option value = "#CC0099" style = "color: #000000">Purple</option>
+        <option value = "#FFFF00" style = "color: #000000">Yellow</option>
+        <option value = "#FF6666" style = "color: #000000">Pink</option>
+        <option value = "#663300" style = "color: #000000">Brown</option>
+        </select>
+      Method:<select id = "methods" style = "color: #000000" 
+              onchange = "SetActionAndMethod();">
+        <option value = "post" style = "color: #000000">Post</option>
+        <option value = "get" style = "color: #000000">Get</option>
+        </select>
+
+
+        <br>
+        <br>
+        <input type="submit" name="submit" value = "Submit"
+        style = "color: #000000">
+
+    </form>
+    </div>
+    </div>
+    </header>
+
+</body>
+
+</html>
