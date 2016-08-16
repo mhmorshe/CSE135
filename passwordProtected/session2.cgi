@@ -31,11 +31,10 @@ print $s->header();
 
 
 # handle the form submit
-
-if(defined $q->param('startSess')){
-    # save param value in the session
-    $s->param('name', $q->param('name'));
-    #printf "Set session value: '%s'\n", $q->escapeHTML($s->param('name'));
+if(defined $q->param('clearSess')){
+    # delete session
+    $s->delete;
+    #print "Session will be deleted.\n";
 }
 
 print "\n</pre>\n";
@@ -43,7 +42,7 @@ print "\n</pre>\n";
 
 # simple HTML form
 
-printf <<'_HTML_', $q->escapeHTML($s->param('name'));
+printf <<'_HTML_', $q->escapeHTML($s->param('test'));
 <!DOCTYPE html>
 <html lang="en">
 
@@ -57,7 +56,7 @@ printf <<'_HTML_', $q->escapeHTML($s->param('name'));
 	
   <link rel="shortcut icon" type="image/x-icon" href="/../img/favicon.ico">
   <link rel=" icon" type="image/x-icon" href="/../img/favicon.ico">
-  <title>Session Page 1 in CGI</title>
+  <title>Session Page 2 in CGI</title>
 
   <!-- Bootstrap Core CSS -->
   <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -69,42 +68,43 @@ printf <<'_HTML_', $q->escapeHTML($s->param('name'));
 
 <body id="page-top" class="index">
 
-
   <!-- Header -->
   <header>
     <div class="container">
     <div class="intro-text">
+    <h1>Session Page 2!</h1><br><br><br>
 
-    <h1>Session Page 1!</h1>
 
+_HTML_
 
+my $name = $s->param('name');
+if($name != '')
+{
+  print "<h1>Hi $name nice to meet you</h1>";
+}
+else
+{
+  print "<h1>Howdy stranger...tell me your name on page1</h1>"
+}
+
+printf <<'_HTML_', $q->escapeHTML($s->param('test'));
     <form id = "formID" action = "" method = "post">
-
-       Name:<br> <input type = "text" style = "color: #000000" 
-                       name = "name" value = "">
-        <br>
-        <br>
-        <input type="submit" name="startSess" value = "start session"
-        style = "color: #000000">
-
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
+    <input type="submit" name="clearSess" value = "Clear Session"
+    style = "color: #000000">
     </form>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <a href="/passwordProtected/session1.php" class="page-scroll btn btn-xl">Session Page1</a></br></br>
 
-    <a href="/passwordProtected/session2.cgi" class="page-scroll btn btn-xl">Session Page 2</a></br></br>
-  
+
     </div>
     </div>
     </header>
-
 </body>
-
 </html>
 
 _HTML_
