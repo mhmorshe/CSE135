@@ -57,4 +57,14 @@ Password: password
 
 
    
-  
+   all the code used to run the app can be found at:
+   http://github.com/mhmorshe/CSE135/tree/master/passwordProtected/crud
+
+        if($pageNum > 1)
+        {
+          $nextPage = $pageNum -1;
+          print"<a href=index.php?order=".$order."&page=".$nextPage.">";
+          print'<input type = "submit" value = "previous Page"
+               name = "pagePrevious"> </a>';
+        }
+
