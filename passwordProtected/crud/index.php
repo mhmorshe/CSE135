@@ -66,7 +66,7 @@
          <th><a href='index.php?order=title'>Title</a></th>
          <th><a href='index.php?order=studio'>Studio</a></th>
          <th><a href='index.php?order=year'>Year</a></th>
-         <th><a href='index.php?order=box_office'>Title</a></th>
+         <th><a href='index.php?order=box_office'>Box Office</a></th>
          <th>Picture</th><th></th></tr>";   
 
   //set the order
