@@ -78,13 +78,14 @@ printf <<'_HTML_', $q->escapeHTML($s->param('test'));
 _HTML_
 
 my $name = $s->param('name');
-if($name != '')
+if($name eq '')
 {
-  print "<h1>Hi $name nice to meet you</h1>";
+
+  print "<h1>Howdy stranger...tell me your name on page1</h1>";
 }
 else
 {
-  print "<h1>Howdy stranger...tell me your name on page1</h1>"
+  print "<h1>Hi $name nice to meet you</h1>";
 }
 
 printf <<'_HTML_', $q->escapeHTML($s->param('test'));
@@ -98,7 +99,7 @@ printf <<'_HTML_', $q->escapeHTML($s->param('test'));
     <br>
     <br>
     <br>
-    <a href="/passwordProtected/session1.php" class="page-scroll btn btn-xl">Session Page1</a></br></br>
+    <a href="/passwordProtected/session1.cgi" class="page-scroll btn btn-xl">Session Page1</a></br></br>
 
 
     </div>
