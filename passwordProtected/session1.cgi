@@ -75,6 +75,17 @@ printf <<'_HTML_', $q->escapeHTML($s->param('name'));
     <div class="container">
     <div class="intro-text">
 
+
+    <a>This page is here to demonstarte my ability to handle sessioning in CGI
+       with perl.  If a value is entered for name and start session is 
+       clicked.  The value of name will be displayed on session page 2.  If a 
+       value is not entered for name or start session in not clicked, session 
+       page 2 will display a message indicating that a value was not entered 
+       on session page 1. Session page 2 will have a button to clear the 
+       session, wich will end the current session and a button to go back to 
+       this page </a>
+
+
     <h1>Session Page 1!</h1>
 
 

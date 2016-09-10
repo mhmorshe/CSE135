@@ -24,5 +24,18 @@ if($randomNum < 2 && $randomNum > 1)
 }
 
 
+
+
+  print "<a>Red White or Blue is randomly picked to be the background color
+            of this page every time it is generated.  A date and time stamp
+            is also displayed on the page to prove that the page was actually
+            dynamicaly generated.  The code for the page is writen in cgi
+            with pearl and is here to demonstrait my ability to dynamically 
+            generate pages in cgi with perl</a>";
+
+
 print "</body> </html>\n";
+
+
+
 

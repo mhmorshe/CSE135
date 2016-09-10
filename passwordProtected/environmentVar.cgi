@@ -7,6 +7,14 @@ print "<html> <head>\n";
 print "</head>\n";
 print "<body>\n";
 
+
+print '<a>This page is here to demonstrate my ability access and use
+            environment variables in cgi with perl.  The page simply prints the 
+            environment variables</a>';
+
+
+
+
 print '<h1 style = "text-align:center">The Environment Variables Are </h1>';
 foreach $variable (sort keys %ENV)
 {

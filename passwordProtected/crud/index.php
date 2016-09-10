@@ -10,7 +10,22 @@
 <body>
 
 <div class="container">
-	
+<br><br>
+<a>This basic App demonstrates my ability to use a database.  Information about
+   various movies is stored in a database, and the information is displayed.
+   The user is able to alter the data stored in the data base by adding 
+   movies and deleting movies and editing information associated with a movie.
+   The user is able to alter the display of the
+   movies by clicking the headings 'title', 'studio', 'year' and 'box office',
+   which will change the order in which the movies are displayed.  3 movies
+   are displayed per page and the page can be changed by clicking next page or
+   previous page.</a><br><br>
+
+<a>Data was taken from the link below</a><br>  
+<a href = http://www.boxofficemojo.com/alltime/world/>http://www.boxofficemojo.com/alltime/world/</a>	
+
+
+
 <h1>Box Office Tracker!</h1>
 
 <?php
